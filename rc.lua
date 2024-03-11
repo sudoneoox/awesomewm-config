@@ -416,6 +416,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 2;
 
 
+
+
+-- call before locking
+awful.spawn.with_shell(HOME_DIR .. "/.config/polybar/hack/scripts/pywal.sh " .. HOME_DIR .. "/.config/awesome/Wallpapers/*")
+
 -- lock on startup
 awful.spawn.with_shell(HOME_DIR .. "/.config/awesome/scripts/lock.sh", function()
     -- Code to execute after the screen has been unlocked

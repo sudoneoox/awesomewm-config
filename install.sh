@@ -13,7 +13,7 @@ install_dep() {
 }
 
 # Install core dependencies
-core_deps="nitrogen rofi polybar network-manager-applet pulseaudio pa-applet-git blueman i3lock-color xautolock scrot maim cbatticon xbacklight light brightnessctl pulseaudio-bluetooth clipmenu pywal networkmanager-dmenu calc"
+core_deps="nitrogen rofi polybar network-manager-applet pulseaudio pa-applet-git blueman i3lock-color xautolock scrot maim cbatticon xbacklight light brightnessctl pulseaudio-bluetooth clipmenu pywal networkmanager-dmenu calc thunar"
 install_dep $core_deps
 
 # Function to handle configuration backups
