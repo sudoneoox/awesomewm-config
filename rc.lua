@@ -419,7 +419,7 @@ beautiful.useless_gap = 2;
 
 
 -- call before locking
-awful.spawn.with_shell(HOME_DIR .. "/.config/polybar/hack/scripts/pywal.sh " .. HOME_DIR .. "/.config/awesome/Wallpapers/*")
+awful.spawn.with_shell(HOME_DIR .. "/.config/polybar/hack/scripts/pywal.sh " .. HOME_DIR .. "/.config/awesome/Wallpapers/wallhaven.png")
 
 -- lock on startup
 awful.spawn.with_shell(HOME_DIR .. "/.config/awesome/scripts/lock.sh", function()
