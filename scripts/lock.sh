@@ -72,7 +72,9 @@ i3lock \
     --lockfailed-text='' \
     --greeter-text='' \
     --ignore-empty-password \
+    --pass-power-keys \
     --pass-media-keys \
     --pass-screen-keys \
     --indicator \
-    --clock
+    --clock \
+    --nofork; ~/.config/polybar/launch.sh & \
