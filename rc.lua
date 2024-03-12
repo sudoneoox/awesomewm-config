@@ -13,6 +13,7 @@ local beautiful = require("beautiful")
 
 -- Notification library
 local naughty = require("naughty")
+
 local menubar = require("menubar")
 
 local hotkeys_popup = require("awful.hotkeys_popup")
@@ -59,6 +60,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "rainbow"))
+beautiful.notification_margin = 20
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -414,6 +416,7 @@ end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
 end)
+
 
 -- }}}
 

@@ -20,14 +20,14 @@ diskname_dir="$HOME/diskname"
 if [ -d "$diskname_dir" ]; then
     for dir in "$diskname_dir"/*/; do
         dir_name=$(basename "$dir")
-        paths["$dir_name"]="$dir"
+        paths["mount: $dir_name"]="$dir"
     done
 fi
 
 # Generate the menu string
 menu=""
 for label in "${!paths[@]}"; do
-    menu+="mount: $label\n"
+    menu+="$label\n"
 done
 
 # Launch rofi to select a path
