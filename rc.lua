@@ -425,7 +425,7 @@ beautiful.useless_gap = 2;
 
 -- call before locking
 awful.spawn.with_shell(HOME_DIR .. "/.config/polybar/hack/scripts/pywal.sh " .. HOME_DIR ..
-                           "/.config/awesome/Wallpapers/wallhaven.png")
+                           "/.config/awesome/Wallpapers/forest.png")
 awful.spawn.with_shell(
     "~/.config/polybar/hack/scripts/polypomo/polypomo > ~/.config/polybar/hack/scripts/polypomo/polypomo.status")
 
@@ -434,7 +434,9 @@ awful.spawn.with_shell(HOME_DIR .. "/.config/awesome/scripts/lock.sh")
 -- Code to execute after the screen has been unlocked
 
 awful.spawn.with_shell("picom \\--conf " .. HOME_DIR .. "/.config/picom/picom.conf &")
-awful.spawn.with_shell("nitrogen --set-zoom-fill --restore --head=0 " .. HOME_DIR .. "/.config/awesome/Wallpapers/* &")
+
+-- Wallpaper
+awful.spawn.with_shell(HOME_DIR .. "/.config/awesome/scripts/wallpaper.sh forest.png")
 
 
 -- this has moved to lock.sh and starts after unlocking the screen
