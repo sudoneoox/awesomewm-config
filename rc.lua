@@ -457,5 +457,8 @@ awful.spawn.with_shell("blueman-applet &")
 -- clipboard manager
 awful.spawn.with_shell("clipmenud &")
 
+-- screenshot
+awful.spawn.with_shell("flameshot &")
+
 -- auto lock on 10 min idle
-awful.spawn.with_shell("xautolock -time 10 -locker i3lock &")
+-- awful.spawn.with_shell("xautolock -time 10 -locker i3lock &")
