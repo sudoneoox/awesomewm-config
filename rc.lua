@@ -425,7 +425,7 @@ beautiful.useless_gap = 2;
 
 -- call before locking
 awful.spawn.with_shell(HOME_DIR .. "/.config/polybar/hack/scripts/pywal.sh " .. HOME_DIR ..
-                           "/.config/awesome/Wallpapers/forest.png")
+                           "/.config/awesome/Wallpapers/dark.png")
 awful.spawn.with_shell(
     "~/.config/polybar/hack/scripts/polypomo/polypomo > ~/.config/polybar/hack/scripts/polypomo/polypomo.status")
 
