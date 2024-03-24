@@ -13,8 +13,9 @@ install_dep() {
 }
 
 # Install core dependencies
-core_deps="nitrogen rofi polybar network-manager-applet pulseaudio pa-applet-git blueman i3lock-color xautolock scrot maim cbatticon xbacklight light brightnessctl pulseaudio-bluetooth clipmenu pywal networkmanager-dmenu calc thunar btop ssh-askpass-fullscreen feh flameshot" 
+core_deps="nitrogen rofi polybar network-manager-applet pulseaudio pa-applet-git blueman i3lock-color xautolock scrot maim cbatticon xbacklight light brightnessctl pulseaudio-bluetooth clipmenu pywal networkmanager-dmenu calc thunar btop ssh-askpass-fullscreen feh flameshot bluez-utils fish fisher" 
 install_dep $core_deps
+
 
 # Function to handle configuration backups
 backup_config() {
@@ -86,8 +87,15 @@ fi
 
 cp -rf "$awesome_dir/kitty/"* "$kitty_dir/"
 
-# --- Needed Fonts ---
+# --- Fish Config ---
+fish_dir="$HOMEDIR/.config/fish"
+if [[ -d "$fish_dir" && $"(ls -A $fish_dir") ]]; then
+    backup_config "$fish_dir"
+fi
 
+cp -rf "$awesome_dir/fish/"* "$fish_dir/"
+
+# --- Needed Fonts ---
 font_dir="$HOME_DIR/.local/share/fonts"
 [[ ! -d "$font_dir" ]] && mkdir -p "$font_dir"
 cp -rf "$awesome_dir/fonts/"* "$font_dir"
