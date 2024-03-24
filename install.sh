@@ -46,7 +46,7 @@ fi
 
 # Copy this script's awesome configuration directory
 echo "Copying AwesomeWM config into the config dir"
-cp -r "../awesomewm-config/"* "$awesome_dir/"
+cp -rf "../awesomewm-config/"* "$awesome_dir/"
 chmod +x "$awesome_dir/lock/lock.sh"
 
 # --- Picom Config ---
@@ -74,9 +74,24 @@ if [[ -d "$polybar_dir" && "$(ls -A $polybar_dir)" ]]; then
     backup_config "$polybar_dir"
 fi
 
-cp -r "$awesome_dir/polybar/"* "$polybar_dir/"
+cp -rf "$awesome_dir/polybar/"* "$polybar_dir/"
 chmod +x "$polybar_dir/launch.sh"
 chmod +x "$polybar_dir/hack/scripts/" -R
+
+# --- Kitty Config ---
+kitty_dir="$HOME_DIR/.config/kitty"
+if [[ -d "$kitty_dir" && "$(ls -A $kitty_dir") ]]; then
+    backup_config "$kitty_dir"
+fi
+
+cp -rf "$awesome_dir/kitty/"* "$kitty_dir/"
+
+# --- Needed Fonts ---
+
+font_dir="$HOME_DIR/.local/share/fonts"
+[[ ! -d "$font_dir" ]] && mkdir -p "$font_dir"
+cp -rf "$awesome_dir/fonts/"* "$font_dir"
+
 
 # Setup Nitrogen reminder
 echo "Remember to configure Nitrogen with your wallpaper. You can use my wallpaper that's placed in the wallpaper dir."
