@@ -6,6 +6,5 @@ end
 set PATH $PATH /home/diego/.local/bin
 
 alias publicip='wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1'
-alias syncthingweb='kitty sh -c "firefox http://127.0.0.1:8080"'
-alias syncdrive='grive -s ~/Desktop/GoodNotes'
+alias syncthingweb='kitty sh -c "firefox http://127.0.0.1:8384"'
 alias vncstart='x11vnc -display :0 -rfbauth ~/.vnc/passwd'
